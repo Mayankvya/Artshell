@@ -1,0 +1,55 @@
+$text-color: white;
+$bg-color: black;
+$breakpoint: 960px;
+#about {
+  display: grid;
+  grid-template-areas: "about img";
+  width: 50%;
+  margin: 5rem auto;
+  background: $text-color;
+  color: $bg-color;
+  border-radius: 2rem;
+  padding: 0;
+  #card1 {
+    grid-area: about;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    p {
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+    span {
+      font-size: 1rem;
+    }
+  }
+  #card2 {
+    grid-area: img;
+    display: flex;
+    img {
+      height: 100%;
+      border-radius: 0rem 2rem 2rem 0rem;
+    }
+  }
+  @media (width < $breakpoint) {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  #card1 {
+    h3 {
+        text-align: center;
+    }
+  }
+    #card2 {
+        img {
+          width: 100%;
+          border-radius: 0rem 0rem 2rem 2rem;
+        }
+      }    
+  }
+}

@@ -1,0 +1,203 @@
+$breakpoint: 960px;
+
+select {
+  outline: none !important;
+  border: none !important;
+  border-bottom: 2px solid black !important;
+  border-radius: 0;
+  box-shadow: none !important;
+  font-size: 1.3rem;
+  font-weight: 700;
+  background: transparent !important;
+  option {
+    font-size: 1.3rem;
+    font-weight: 700;
+    outline: none !important;
+    border: none !important;
+    width: 25%;
+    border-radius: 0px !important;
+  }
+}
+
+#filter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: black;
+  background: url("../img/blobs-blur.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 15rem 0rem;
+  form {
+    width: 75%;
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 1rem;
+    background-color: #fffcf9af;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    div {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      label {
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+      }
+    }
+    @media (width < $breakpoint) {
+      padding: 2rem 1rem;
+      flex-direction: column;
+      div {
+        width: 100%;
+        label {
+          font-size: 1.2rem;
+          font-weight: 400;
+          margin-bottom: 1rem;
+        }
+        select {
+          font-size: 0.75rem;
+          option {
+            font-size: 0.75rem;
+          }
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+#events {
+  .heading {
+    display: flex;
+    width: 75%;
+    margin: 0 auto 5rem auto;
+    justify-content: space-between;
+    align-items: center;
+    form {
+      display: flex;
+      flex-direction: row;
+      div {
+        margin: 0 2rem;
+        text-align: center;
+        select {
+          background: white !important;
+          border-radius: 3rem;
+          option {
+            background: white !important;
+            width: 100%;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+    @media (width < $breakpoint) {
+      flex-direction: column;
+      form {
+        flex-direction: column;
+        div {
+          margin: 1rem 0;
+        }
+      }
+    }
+  }
+  .events-holder {
+    display: grid;
+    width: 75%;
+    grid-template-columns: repeat(3, 33%);
+    gap: 4rem;
+    margin: 0 auto;
+    .event-card {
+      box-shadow: 0.25rem 0.25rem 0.5rem 0.2rem #7773aa48;
+      border-radius: 1rem;
+      img {
+        width: 100%;
+      }
+      .card-info {
+        display: flex;
+        flex-direction: row;
+        margin-top: 1rem;
+        padding: 0.5rem 0.25rem;
+        .card-date {
+          display: flex;
+          flex-direction: column;
+          margin: 0 1rem;
+          text-align: center;
+          p {
+            margin: 0 !important;
+          }
+        }
+        .card-title-desc {
+          h3 {
+            font-size: 1rem;
+          }
+          p {
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+    @media (width < $breakpoint) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  #heading2 {
+    margin-top: 3rem;
+  }
+  .cta-holder {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem 0;
+  }
+}
+#foot-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color: black;
+  padding: 3rem 6rem 0rem 6rem;
+  img {
+    width: 30%;
+    margin-right: 2rem;
+  }
+  #foot-info {
+    display: flex;
+    flex-direction: column;
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      padding: 0.75rem 1rem;
+      width: 40%;
+      border: none !important;
+      border-radius: 3rem;
+      box-shadow: 0.25rem 0.25rem 0.5rem 0.2rem #81818148;
+      p {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 0;
+      }
+    }
+  }
+  @media (width < $breakpoint) {
+    padding: 1rem;
+    flex-direction: column;
+    img {
+      display: none;
+    }
+    #foot-info {
+      button {
+        font-size: 1rem;
+        width: 100%;
+      }
+    }
+  }
+}

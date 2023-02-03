@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@1&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav id="nav">
+      <div class="align-center menu">
+        <div class="align-center logo">
+          <img src="/img/logo.svg" alt="logo" />
+        </div>
+        <ul>
+          <li
+            onmouseover="addBorder(this)"
+            onmouseout="removeBorder(this)"
+            class="menu-item"
+          >
+            <a href="/">Home</a>
+          </li>
+          <li
+            id="current"
+            class="menu-item"
+            onmouseover="addBorder(this)"
+            onmouseout="removeBorder(this)"
+          >
+            <a href="/artists.html">Artists</a>
+          </li>
+          <li
+            class="menu-item"
+            onmouseover="addBorder(this)"
+            onmouseout="removeBorder(this)"
+          >
+            <a href="/arts.html">Arts</a>
+          </li>
+          <li
+            class="menu-item"
+            onmouseover="addBorder(this)"
+            onmouseout="removeBorder(this)"
+          >
+            <a href="/events.html">Events</a>
+          </li>
+          <li
+            class="menu-item"
+            onmouseover="addBorder(this)"
+            onmouseout="removeBorder(this)"
+          >
+            <a href="/about.html">About</a>
+          </li>
+        </ul>
+        <div id="social" class="align-center">
+          <a href="#">
+            <img src="./img/InstagramLogo.svg" alt="insta" />
+          </a>
+          <a href="#">
+            <img src="./img/Phone.svg" alt="insta" />
+          </a>
+        </div>
+      </div>
+      <div id="mobile-menu" class="align-center menu">
+        <div class="align-center logo">
+          <img src="/img/logo.svg" alt="logo" />
+        </div>
+        <ul>
+          <li class="menu-item"><a href="/">Home</a></li>
+          <li class="menu-item"><a href="/artists.html">Artist</a></li>
+          <li class="menu-item"><a href="/arts.html">Arts</a></li>
+          <li class="menu-item"><a href="/events.html">Events</a></li>
+          <li class="menu-item"><a href="/about.html">About</a></li>
+          <li class="menu-item">
+            <a href="#">
+              <img src="./img/InstagramLogo.svg" alt="insta" />
+            </a>
+            <a href="#">
+              <img src="./img/Phone.svg" alt="insta" />
+            </a>
+          </li>
+        </ul>
+        <div id="menu-btn" onclick="openMenu()">
+          <img src="./img/menu.svg" alt="menu" />
+        </div>
+      </div>
+    </nav>
+
+    <section id="header" class="align-center">
+      <h1 class="grad-heading">Our Artists</h1>
+      <h1>1000+ Art Work</h1>
+      <p>
+        <span>
+          "Discover, Connect, and Create: Artshell, your gateway to the art
+          world"
+        </span>
+        <br />
+        Artshell is an online platform that connects artists, collectors, and
+        art enthusiasts from all over the world. Whether you're looking to
+        showcase your work, discover new artists, or purchase artworks, Artshell
+        is your one-stop destination for all things art.
+      </p>
+      <div id="btn-cont" style="margin-top: 2rem">
+        <button class="btn grad-border">Artist</button>
+        <button class="btn">Art Works</button>
+      </div>
+    </section>
+
+    <!-- art-work section  -->
+    <section id="art-work" class="align-center">
+      <h1 class="grad-heading">Our Artworks.</h1>
+      <h1>Make one for you.</h1>
+      <div id="search-area">
+        <input type="text" placeholder="Search for your artwork" />
+        <button><img src="./img/search2.svg" alt="search" /></button>
+      </div>
+      <div id="chips-group">
+        <div class="chip grad-border">Best</div>
+        <div class="chip">Jaipur</div>
+        <div class="chip">Ajmer</div>
+        <div class="chip">Rajsamand Art</div>
+        <div class="chip">Jodhpuri Art</div>
+        <div class="chip">Handicraft</div>
+        <div class="chip">Lastest</div>
+        <div class="chip">Propluar Art</div>
+        <div class="chip">Artist/Designer</div>
+        <div class="chip">4+ Rating</div>
+        <div class="chip">Artist</div>
+      </div>
+      <div id="images">
+        <div class="image-block">
+          <div class="image-card small1">
+            <img src="./img/artist1.png" alt="img" />
+            <h3 class="grad-heading">Jessica Jones</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora,
+              quo quis molestiae eaque ad possimus aperiam amet veniam, officia
+              atque incidunt? Modi at mollitia ut, iusto quasi vitae quidem
+              reprehenderit!
+            </p>
+            <h3 class="grad-heading">Watch Artist Work</h3>
+          </div>
+          <div class="image-card big1">
+            <img src="./img/artist2.png" alt="img" />
+            <h3 class="grad-heading">Jessica Jones</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora,
+              quo quis molestiae eaque ad possimus aperiam amet veniam, officia
+              atque incidunt? Modi at mollitia ut, iusto quasi vitae quidem
+              reprehenderit!
+            </p>
+            <h3 class="grad-heading">Watch Artist Work</h3>
+          </div>
+          <div class="image-card small2">
+            <img src="./img/artist3.png" alt="img" />
+            <h3 class="grad-heading">Jessica Jones</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora,
+              quo quis molestiae eaque ad possimus aperiam amet veniam, officia
+              atque incidunt? Modi at mollitia ut, iusto quasi vitae quidem
+              reprehenderit!
+            </p>
+            <h3 class="grad-heading">Watch Artist Work</h3>
+          </div>
+          <div class="image-card big2">
+            <img src="./img/artist4.png" alt="img" />
+            <h3 class="grad-heading">Jessica Jones</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora,
+              quo quis molestiae eaque ad possimus aperiam amet veniam, officia
+              atque incidunt? Modi at mollitia ut, iusto quasi vitae quidem
+              reprehenderit!
+            </p>
+            <h3 class="grad-heading">Watch Artist Work</h3>
+          </div>
+          <div class="image-card small3">
+            <img src="./img/artist5.png" alt="img" />
+            <h3 class="grad-heading">Jessica Jones</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora,
+              quo quis molestiae eaque ad possimus aperiam amet veniam, officia
+              atque incidunt? Modi at mollitia ut, iusto quasi vitae quidem
+              reprehenderit!
+            </p>
+            <h3 class="grad-heading">Watch Artist Work</h3>
+          </div>
+          <div class="image-card big3">
+            <img src="./img/artist6.png" alt="img" />
+            <h3 class="grad-heading">Jessica Jones</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora,
+              quo quis molestiae eaque ad possimus aperiam amet veniam, officia
+              atque incidunt? Modi at mollitia ut, iusto quasi vitae quidem
+              reprehenderit!
+            </p>
+            <h3 class="grad-heading">Watch Artist Work</h3>
+          </div>
+        </div>
+        <div class="image-block">
+          <div class="image-card small1">
+            <img src="./img/artist7.png" alt="img" />
+            <h3 class="grad-heading">Jessica Jones</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora,
+              quo quis molestiae eaque ad possimus aperiam amet veniam, officia
+              atque incidunt? Modi at mollitia ut, iusto quasi vitae quidem
+              reprehenderit!
+            </p>
+            <h3 class="grad-heading">Watch Artist Work</h3>
+          </div>
+          <div class="image-card big1">
+            <img src="./img/artist8.png" alt="img" />
+            <h3 class="grad-heading">Jessica Jones</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora,
+              quo quis molestiae eaque ad possimus aperiam amet veniam, officia
+              atque incidunt? Modi at mollitia ut, iusto quasi vitae quidem
+              reprehenderit!
+            </p>
+            <h3 class="grad-heading">Watch Artist Work</h3>
+          </div>
+          <div class="image-card small2">
+            <img src="./img/artist9.png" alt="img" />
+            <h3 class="grad-heading">Jessica Jones</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora,
+              quo quis molestiae eaque ad possimus aperiam amet veniam, officia
+              atque incidunt? Modi at mollitia ut, iusto quasi vitae quidem
+              reprehenderit!
+            </p>
+            <h3 class="grad-heading">Watch Artist Work</h3>
+          </div>
+          <div class="image-card big2">
+            <img src="./img/artist10.png" alt="img" />
+            <h3 class="grad-heading">Jessica Jones</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora,
+              quo quis molestiae eaque ad possimus aperiam amet veniam, officia
+              atque incidunt? Modi at mollitia ut, iusto quasi vitae quidem
+              reprehenderit!
+            </p>
+            <h3 class="grad-heading">Watch Artist Work</h3>
+          </div>
+          <div class="image-card small3">
+            <img src="./img/artist11.png" alt="img" />
+            <h3 class="grad-heading">Jessica Jones</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora,
+              quo quis molestiae eaque ad possimus aperiam amet veniam, officia
+              atque incidunt? Modi at mollitia ut, iusto quasi vitae quidem
+              reprehenderit!
+            </p>
+            <h3 class="grad-heading">Watch Artist Work</h3>
+          </div>
+          <div class="image-card big3">
+            <img src="./img/artist12.png" alt="img" />
+            <h3 class="grad-heading">Jessica Jones</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora,
+              quo quis molestiae eaque ad possimus aperiam amet veniam, officia
+              atque incidunt? Modi at mollitia ut, iusto quasi vitae quidem
+              reprehenderit!
+            </p>
+            <h3 class="grad-heading">Watch Artist Work</h3>
+          </div>
+        </div>
+        <button class="btn grad-border">Load More</button>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <span>Copyright 2023 @All Rights Reserved</span
+      ><span class="grad-heading">Made with love by</span>
+      <img src="/img/logo.svg" alt="logo" />
+    </footer>
+  </body>
+  <script>
+    function openMenu() {
+      document.getElementById("mobile-menu").classList.toggle("open");
+    }
+  </script>
+</html>

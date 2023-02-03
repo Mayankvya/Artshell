@@ -1,0 +1,496 @@
+// Variables
+$text-color: white;
+$bg-color: black;
+$grad: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+  linear-gradient(
+    90deg,
+    rgb(223 144 25),
+    rgb(254 232 24) 38.02%,
+    rgb(76 180 205) 75.83%,
+    rgb(3 148 43)
+  );
+$breakpoint: 960px;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+:root {
+  font-size: 16px;
+  font-family: "Clash Grotesk", sans-serif;
+}
+body {
+  background-color: $bg-color;
+  color: $text-color;
+  overflow-x: hidden;
+  a {
+    text-decoration: none;
+  }
+}
+.align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.grad-heading {
+  background: $grad;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.btn {
+  font-size: 1.2rem;
+  background: none;
+  outline: none;
+  border: 3px solid white;
+  color: $text-color;
+  padding: 1rem 2rem;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+.grad-border {
+  border: solid 3px transparent !important;
+  background-image: $grad;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  background-color: black;
+  box-shadow: 2px 1000px 2px rgb(0 0 0) inset;
+  box-sizing: border-box;
+}
+.image-carousel {
+  margin-top: 5rem;
+  background: url("../img/blobs-blur.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 8rem 0rem;
+  button {
+    padding: 1rem !important;
+    img {
+      border: none !important;
+      margin: 0 !important;
+      width: 80% !important;
+    }
+  }
+  #btn-2 {
+    img {
+      transform: rotate(180deg) !important;
+    }
+  }
+  img {
+    width: 18%;
+    aspect-ratio: 1 / 1;
+    border: 3px solid white !important;
+    margin: 2rem !important;
+  }
+}
+
+h1 {
+  font-size: 4rem;
+  letter-spacing: 0.25rem;
+  font-weight: 500;
+  @media (width < $breakpoint) {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
+p {
+  @media (width < $breakpoint) {
+    font-size: 0.5rem;
+    text-align: center;
+  }
+}
+span {
+  @media (width < $breakpoint) {
+    line-height: 1.25 !important;
+    font-size: 0.75rem !important;
+    text-align: center;
+  }
+}
+#nav {
+  @media (width < $breakpoint) {
+    background: black;
+    height: max-content;
+  }
+  .menu {
+    display: grid;
+    grid-template-areas: "logo menu menu social";
+    width: 100%;
+    justify-content: center;
+    height: 6rem;
+    @media (width < $breakpoint) {
+      display: none;
+    }
+    ul {
+      grid-area: menu;
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      width: 69vw;
+      align-items: center;
+      justify-content: center;
+      li {
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+        a {
+          color: $text-color;
+        }
+      }
+      .grad-border {
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
+        border-bottom: solid 3px transparent !important;
+        transition: 0.2s ease;
+      }
+    }
+    .logo {
+      @media (width < $breakpoint) {
+        img {
+          width: 75%;
+        }
+      }
+      grid-area: logo;
+    }
+    #social {
+      grid-area: social;
+    }
+  }
+  #mobile-menu {
+    grid-area: menu;
+    @media (width > $breakpoint) {
+      display: none;
+    }
+    @media (width < $breakpoint) {
+      position: sticky;
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      justify-content: space-between;
+      height: 100%;
+      ul {
+        display: none;
+        flex-direction: column;
+        background: red;
+        border-radius: 1.5rem;
+      }
+      #menu-btn {
+        width: 9%;
+        margin: 1rem;
+      }
+      &.open {
+        ul {
+          display: flex;
+          width: 60%;
+        }
+      }
+      .logo {
+        justify-content: flex-start;
+        margin: 1rem;
+        width: max-content;
+      }
+    }
+    #menu-btn {
+      display: flex;
+      justify-content: flex-end;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+#header {
+  flex-direction: column;
+  padding: 6rem 2rem 3rem 2rem;
+  flex-wrap: wrap;
+  p {
+    width: 55%;
+    text-align: center;
+    margin-top: 2rem;
+    letter-spacing: 0.1rem;
+    span {
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 2rem;
+    }
+  }
+}
+#cta {
+  flex-direction: column;
+  #btn-cont {
+    .btn {
+      margin: 0rem 1rem;
+    }
+  }
+  @media (width < $breakpoint) {
+    .image-carousel {
+      margin-top: 0;
+      padding: 7rem 0rem;
+      display: grid;
+      grid-template-areas: "btn1 img1 img1 img2 img2 img3 img3 btn2";
+      #btn-1 {
+        grid-area: btn1;
+        margin-right: 0.5rem;
+      }
+      #btn-2 {
+        grid-area: btn2;
+      }
+      #img-1 {
+        grid-area: img1;
+      }
+      #img-2 {
+        grid-area: img2;
+      }
+      #img-3 {
+        grid-area: img3;
+      }
+      img {
+        width: 75%;
+        margin: 0 !important;
+      }
+    }
+  }
+}
+#achievement {
+  flex-direction: column;
+  margin-top: 5rem;
+  min-height: 100vh;
+  @media (width < $breakpoint) {
+    min-height: max-content;
+  }
+  img {
+    z-index: 999;
+    @media (width < $breakpoint) {
+      width: 100%;
+    }
+  }
+  #achievement-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    @media (width < $breakpoint) {
+      img {
+        position: absolute;
+        top: 27rem;
+      }
+    }
+  }
+}
+#artists {
+  flex-direction: column;
+  margin: 5rem 0rem;
+  img {
+    width: 90%;
+  }
+}
+#testimonials {
+  flex-direction: column;
+  .image-carousel {
+    #testimonial-card {
+      display: flex;
+      flex-direction: row;
+      width: 75%;
+      img {
+        margin-left: 28rem !important;
+        width: 25% !important;
+        border: none !important;
+        aspect-ratio: 0;
+      }
+      #review {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-top: 10rem;
+        width: 27vw;
+        right: 7%;
+        height: fit-content;
+        background: black;
+        padding: 2rem;
+        img {
+          position: absolute;
+          right: 26%;
+          top: 80%;
+          width: 100% !important;
+          margin: 0 !important;
+          @media (width < $breakpoint) {
+            position: relative;
+          }
+        }
+      }
+    }
+    button {
+      img {
+        width: 2rem !important;
+        margin: 0 !important;
+      }
+    }
+    @media (width < $breakpoint) {
+      button {
+        position: relative;
+        img {
+          margin: 0 !important;
+        }
+      }
+      #testimonial-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+          margin: 0 !important;
+          width: 75% !important;
+        }
+        #review {
+          margin: 0 !important;
+          position: inherit;
+          display: flex;
+        }
+      }
+    }
+  }
+}
+#art-work {
+  flex-direction: column;
+  #search-area {
+    border: 2px solid white;
+    padding: 0.75rem 1rem;
+    width: 25%;
+    margin-top: 3rem;
+    border-radius: 6rem;
+    display: flex;
+    input[type="text"] {
+      background: none;
+      border: none;
+      width: 85%;
+      height: 100%;
+      font-size: 2rem;
+      margin: auto;
+      color: white;
+      outline: none;
+      margin-left: 5%;
+    }
+    button {
+      background: none;
+      cursor: pointer;
+    }
+    img {
+      width: 3rem;
+      border: none;
+    }
+    @media (width < $breakpoint) {
+      width: 75%;
+      margin-top: 2rem;
+      height: max-content;
+      padding: 0;
+      input[type="text"] {
+        height: 100%;
+        font-size: 2rem;
+        margin: auto;
+        color: white;
+        outline: none;
+        margin-left: 5%;
+      }
+      button {
+        border: none;
+        outline: none;
+        margin: auto 0;
+      }
+    }
+  }
+  #chips-group {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 60%;
+    justify-content: center;
+    .chip {
+      font-size: 1.25rem;
+      font-weight: 600;
+      border: 2px solid white;
+      padding: 0.75rem 1rem;
+      border-radius: 2rem;
+      margin: 0.5rem 1rem;
+      cursor: pointer;
+    }
+    .grad-border {
+      border: none;
+      box-shadow: none;
+      color: black;
+    }
+  }
+  #images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    .image-block {
+      display: grid;
+      grid-template-areas:
+        "small1 big1 small2"
+        "big2 big1 big3"
+        "big2 small3 big3";
+      width: 80%;
+      @media (width < $breakpoint) {
+        display: flex;
+        flex-direction: column;
+      }
+      .small1 {
+        grid-area: small1;
+      }
+      .small2 {
+        grid-area: small2;
+      }
+      .small3 {
+        grid-area: small3;
+      }
+      .big1 {
+        grid-area: big1;
+      }
+      .big2 {
+        grid-area: big2;
+      }
+      .big3 {
+        grid-area: big3;
+      }
+      .image-card {
+        margin: 1rem;
+        @media (width < $breakpoint) {
+          img {
+            width: 100%;
+            height: 100%;
+          }
+          text-align: center;
+        }
+        h3 {
+          font-size: 1.5rem;
+          margin: 1rem 1.5rem;
+        }
+        p {
+          font-size: 1.2rem;
+          margin: 1rem 1.5rem;
+        }
+        img {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 3rem 0rem;
+  span {
+    margin-right: 2rem;
+  }
+  @media (width < $breakpoint) {
+    flex-direction: column;
+    span {
+      font-size: 1.2rem !important;
+      margin-bottom: 0.25rem;
+    }
+    img {
+      margin: auto;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+#about {
+  display: grid;
+  grid-template-areas: "about img";
+  width: 50%;
+  margin: 5rem auto;
+  background: white;
+  color: black;
+  border-radius: 2rem;
+  padding: 0;
+}
+#about #card1 {
+  grid-area: about;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+}
+#about #card1 p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+#about #card1 h3 {
+  font-size: 1.5rem;
+}
+#about #card1 span {
+  font-size: 1rem;
+}
+#about #card2 {
+  grid-area: img;
+  display: flex;
+}
+#about #card2 img {
+  height: 100%;
+  border-radius: 0rem 2rem 2rem 0rem;
+}
+@media (width < 960px) {
+  #about {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+  #about #card1 h3 {
+    text-align: center;
+  }
+  #about #card2 img {
+    width: 100%;
+    border-radius: 0rem 0rem 2rem 2rem;
+  }
+}/*# sourceMappingURL=simon.css.map */

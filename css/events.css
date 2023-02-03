@@ -1,0 +1,205 @@
+select {
+  outline: none !important;
+  border: none !important;
+  border-bottom: 2px solid black !important;
+  border-radius: 0;
+  box-shadow: none !important;
+  font-size: 1.3rem;
+  font-weight: 700;
+  background: transparent !important;
+}
+select option {
+  font-size: 1.3rem;
+  font-weight: 700;
+  outline: none !important;
+  border: none !important;
+  width: 25%;
+  border-radius: 0px !important;
+}
+
+#filter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: black;
+  background: url("../img/blobs-blur.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 15rem 0rem;
+}
+#filter form {
+  width: 75%;
+  margin: 0 auto;
+  padding: 3rem;
+  border-radius: 1rem;
+  background-color: rgba(255, 252, 249, 0.6862745098);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+#filter form div {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+#filter form div label {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+@media (width < 960px) {
+  #filter form {
+    padding: 2rem 1rem;
+    flex-direction: column;
+  }
+  #filter form div {
+    width: 100%;
+  }
+  #filter form div label {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  #filter form div select {
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  #filter form div select option {
+    font-size: 0.75rem;
+  }
+}
+
+#events .heading {
+  display: flex;
+  width: 75%;
+  margin: 0 auto 5rem auto;
+  justify-content: space-between;
+  align-items: center;
+}
+#events .heading form {
+  display: flex;
+  flex-direction: row;
+}
+#events .heading form div {
+  margin: 0 2rem;
+  text-align: center;
+}
+#events .heading form div select {
+  background: white !important;
+  border-radius: 3rem;
+}
+#events .heading form div select option {
+  background: white !important;
+  width: 100%;
+  font-size: 1rem;
+}
+@media (width < 960px) {
+  #events .heading {
+    flex-direction: column;
+  }
+  #events .heading form {
+    flex-direction: column;
+  }
+  #events .heading form div {
+    margin: 1rem 0;
+  }
+}
+#events .events-holder {
+  display: grid;
+  width: 75%;
+  grid-template-columns: repeat(3, 33%);
+  gap: 4rem;
+  margin: 0 auto;
+}
+#events .events-holder .event-card {
+  box-shadow: 0.25rem 0.25rem 0.5rem 0.2rem rgba(119, 115, 170, 0.2823529412);
+  border-radius: 1rem;
+}
+#events .events-holder .event-card img {
+  width: 100%;
+}
+#events .events-holder .event-card .card-info {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  padding: 0.5rem 0.25rem;
+}
+#events .events-holder .event-card .card-info .card-date {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+  text-align: center;
+}
+#events .events-holder .event-card .card-info .card-date p {
+  margin: 0 !important;
+}
+#events .events-holder .event-card .card-info .card-title-desc h3 {
+  font-size: 1rem;
+}
+#events .events-holder .event-card .card-info .card-title-desc p {
+  font-size: 0.75rem;
+}
+@media (width < 960px) {
+  #events .events-holder {
+    display: flex;
+    flex-direction: column;
+  }
+}
+#events #heading2 {
+  margin-top: 3rem;
+}
+#events .cta-holder {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem 0;
+}
+
+#foot-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color: black;
+  padding: 3rem 6rem 0rem 6rem;
+}
+#foot-top img {
+  width: 30%;
+  margin-right: 2rem;
+}
+#foot-top #foot-info {
+  display: flex;
+  flex-direction: column;
+}
+#foot-top #foot-info button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 0.75rem 1rem;
+  width: 40%;
+  border: none !important;
+  border-radius: 3rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem 0.2rem rgba(129, 129, 129, 0.2823529412);
+}
+#foot-top #foot-info button p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+@media (width < 960px) {
+  #foot-top {
+    padding: 1rem;
+    flex-direction: column;
+  }
+  #foot-top img {
+    display: none;
+  }
+  #foot-top #foot-info button {
+    font-size: 1rem;
+    width: 100%;
+  }
+}/*# sourceMappingURL=events.css.map */
